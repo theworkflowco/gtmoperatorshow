@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob Dietle - GTM Operator Show Prep</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #F8EDD1;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          #F9F7F2 0px,
+          #F9F7F2 12px,
+          transparent 12px,
+          transparent 16px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          #F9F7F2 0px,
+          #F9F7F2 12px,
+          transparent 12px,
+          transparent 16px
+        );
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      padding: 60px 20px;
+      color: #1E1515;
+      line-height: 1.7;
+      position: relative;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #F9F7F2;
+      border: 6px solid #BA7350;
+      border-radius: 7px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      padding: 50px 60px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1E1515;
+    }
+
+    .logo-w {
+      color: #DDA517;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #666;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 600px;
+    }
+
+    .guest-name {
+      font-family: 'Fira Code', monospace;
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 30px;
+      color: #1E1515;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-top: 6px;
+    }
+
+    .content {
+      padding: 50px 60px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1E1515;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #DDA517;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: #DDA517;
+      opacity: 0.4;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1E1515;
+      margin: 30px 0 12px 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .highlight-box {
+      background: #F9F9F9;
+      border-left: 3px solid #DDA517;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      color: #333;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .topic-card {
+      background: white;
+      border: 5px solid #9CA886;
+      padding: 24px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .topic-card::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 8px;
+      width: 32px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Crect x='8' y='4' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='0' width='4' height='4' fill='%239CA886'/%3E%3Crect x='16' y='0' width='4' height='4' fill='%239CA886'/%3E%3Crect x='20' y='4' width='4' height='4' fill='%239CA886'/%3E%3Crect x='4' y='8' width='4' height='4' fill='%239CA886'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%239CA886'/%3E%3Crect x='4' y='12' width='4' height='4' fill='%239CA886'/%3E%3Crect x='24' y='12' width='4' height='4' fill='%239CA886'/%3E%3Crect x='8' y='16' width='4' height='4' fill='%239CA886'/%3E%3Crect x='20' y='16' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%239CA886'/%3E%3Crect x='16' y='20' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='4' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='4' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='8' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='20' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='8' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='20' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='16' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='16' width='4' height='4' fill='%23F8EDD1'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .topic-title {
+      font-weight: 700;
+      color: #1E1515;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .question {
+      background: #F9F9F9;
+      border-left: 3px solid #DDA517;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .question-number {
+      color: #DDA517;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    blockquote {
+      background: #F9F9F9;
+      border-left: 3px solid #DDA517;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    .post-reference {
+      margin-top: 16px;
+      text-align: right;
+    }
+
+    .post-reference a {
+      display: inline-block;
+      background: #F8EDD1;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          #F9F7F2 0px,
+          #F9F7F2 2px,
+          transparent 2px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          #F9F7F2 0px,
+          #F9F7F2 2px,
+          transparent 2px,
+          transparent 4px
+        );
+      color: #7A5C3E;
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      margin-right: 42px;
+      text-decoration: none;
+      position: relative;
+      box-shadow:
+        0 -3px 0 0 #B8860B,
+        0 3px 0 0 #B8860B,
+        -3px 0 0 0 #B8860B,
+        3px 0 0 0 #B8860B,
+        -2px -3px 0 0 #B8860B,
+        2px -3px 0 0 #B8860B,
+        -2px 3px 0 0 #B8860B,
+        2px 3px 0 0 #B8860B,
+        -3px -2px 0 0 #B8860B,
+        3px -2px 0 0 #B8860B,
+        -3px 2px 0 0 #B8860B,
+        3px 2px 0 0 #B8860B;
+    }
+
+    .post-reference a:hover {
+      background: #F9F7F2;
+      color: #5C4530;
+    }
+
+    .footer {
+      background: #1E1515;
+      color: #EDE9E5;
+      padding: 30px 60px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    @media print {
+      body {
+        background: #F8EDD1;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        background: #F9F7F2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">The <span class="logo-w">W</span>orkflow Company</div>
+      <div class="tagline">Podcast Research Brief for the GTM Operator Show</div>
+      <div class="guest-name">Jacob Dietle</div>
+      <div class="subtitle">Founder · Taste Systems</div>
+    </div>
+
+    <div class="content">
+      <!-- About the Show Section -->
+      <div class="section">
+        <h2>About the GTM Operator Show</h2>
+        <p><strong>GTM Operator Show</strong> features conversations with operators who are pushing the boundaries of how GTM teams work—exploring the thinking patterns and decision frameworks behind meaningful innovation.</p>
+
+        <h3>The Audience</h3>
+        <p>The show reaches ~10,000 highly curated GTM leaders on LinkedIn—practitioners and leaders at tech startups who are actively seeking better approaches to revenue operations, process design, and systematic execution. These are operators who care about how things work, not just what to do.</p>
+
+        <h3>Format</h3>
+        <ul>
+          <li><strong>Platform:</strong> Squadcast (browser-based, no download or account needed)</li>
+          <li><strong>Duration:</strong> 50-60 minutes of conversation (edited down for the final episode)</li>
+          <li><strong>Style:</strong> Video podcast, conversational—just you and the host talking through the topics</li>
+          <li><strong>Timing flexibility:</strong> If you have a product launch or time-sensitive announcement, we can coordinate your episode timing to align with your promotional window</li>
+        </ul>
+      </div>
+
+      <!-- About Section -->
+      <div class="section">
+        <h2>What We Know About You</h2>
+        <p>You're the founder of Taste Systems (August 2025), building what you call "the Bell Labs of technical GTM" at the intersection of GTM, software engineering, AI agents, MCP, and context engineering. Prior to Taste Systems, you founded Digital Leverage (Feb 2024), focused on GTM engineering solutions leveraging Gen AI implementation and growth automation. You have a technical background in Information Systems and Entrepreneurship from Fordham Gabelli School of Business.</p>
+
+        <h3>Your Expertise Areas</h3>
+        <ul>
+          <li>Context Engineering & Context Operating Systems</li>
+          <li>AI Agent Implementation (Claude Code, MCP, agentic workflows)</li>
+          <li>GTM Engineering & Growth Engineering</li>
+          <li>Technical GTM Architecture (systems thinking for revenue teams)</li>
+          <li>Prompt Engineering & LLM Implementation Patterns</li>
+        </ul>
+      </div>
+
+      <!-- Why This Conversation Section -->
+      <div class="section">
+        <h2>Why This Conversation Matters</h2>
+
+        <h3>Unique Perspective</h3>
+        <p>You're building operating systems for GTM (not just tools or workflows) with a systems architecture mindset. Your concept of "Context Operating Systems" bridges technical implementation and strategic GTM thinking in a way few practitioners do. You're thinking about how to make AI "create like you do" by amplifying taste and scaling expertise—not just automating tasks.</p>
+
+        <h3>GTM Relevance</h3>
+        <p>Your work on context engineering, agentic systems, and making AI preserve institutional knowledge maps perfectly to our audience of GTM leaders building intelligent systems. There's direct overlap with The Workflow Company's positioning around AI-native GTM systems, CRM intelligence, and process engineering.</p>
+
+        <h3>Audience Value</h3>
+        <p>Listeners will learn how to move from "AI that automates" to "AI that amplifies"—practical frameworks for context management, agentic search implementation, and building systems that compound expertise over time. Your technical depth combined with GTM focus makes complex concepts (context engineering, MCP, Claude Skills) accessible and actionable.</p>
+      </div>
+
+      <!-- From Their Content Section -->
+      <div class="section">
+        <h2>From Your Content</h2>
+        <p>We've been following your work closely. Here are some insights that particularly resonated:</p>
+
+        <div class="topic-card">
+          <div class="topic-title">Context Management as Core Advantage</div>
+          <p>How context management (task decomposition, persistence, reusability) is what makes Claude Code superior to chatbots—enabling AI to "create like you do" by remembering preferences and compounding knowledge.</p>
+          <blockquote>
+            "Claude Code has the best context management of ANY tooling on the market... it means your AI works the way you actually want it to... You can finally get your AI to create like you do. It remembers it + you can capture and reuse. Scaling your expertise and amplifying your taste."
+          </blockquote>
+          <div class="post-reference"><a href="https://www.linkedin.com/posts/jacob-dietle_the-misunderstood-core-reason-why-claude-activity-7393798988015198208-DLvf" target="_blank">View post →</a></div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">Agentic Search Quality</div>
+          <p>Your three-layer framework for agentic search (underlying context/data quality → interface design → agent instructions)—moving beyond generic AI to systems that surface forgotten insights.</p>
+          <blockquote>
+            "There are three layers of an Agentic Search Implementation: underlying context and/or data, interface and agent instructions... These questions make the difference between 'this system isn't much better than generic AI' to 'holy sh*t this thing is amazing, finding stuff I forgot about and surfacing insights I didn't even know would be valuable to me'"
+          </blockquote>
+          <div class="post-reference"><a href="https://www.linkedin.com/posts/jacob-dietle_how-to-make-ai-actually-find-what-you-want-activity-7393516883502817280-xvfY" target="_blank">View post →</a></div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">Taste & Craftsmanship</div>
+          <p>Your contrarian belief that AI adoption will create insatiable demand for craftsmanship, not destroy it—the shift from "AI replaces people" to "people use AI to amplify their unique taste and expertise."</p>
+          <blockquote>
+            "The mainstream POV on AI and creativity is 'slop is going to overwhelm our collective consciousness'... I believe mass AI adoption is going to create such an insatiable demand for craftsmanship... When you shift from 'use AI to automate and replace people' to 'people use AI to amplify their unique taste and expertise' the future opens up and it looks much brighter."
+          </blockquote>
+          <div class="post-reference"><a href="https://www.linkedin.com/posts/jacob-dietle_the-mainstream-pov-on-ai-and-creativity-is-activity-7392670504190533633-qRsN" target="_blank">View post →</a></div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">Practical Prompt Engineering</div>
+          <p>Specific, tactical patterns you've learned building systems: borrowing expertise via prompting, using AI to interview you for clarity, task decomposition.</p>
+          <blockquote>
+            "High Signal Prompt tips that Go Crazy: 1. If you ever feel like you don't have the expertise to figure something out, borrow it... 2. Often times the bottleneck for getting your AI to actually solve your problem is not the AI but your own lack of clarity... 3. Never ever try to one shot a large problem set."
+          </blockquote>
+          <div class="post-reference"><a href="https://www.linkedin.com/posts/jacob-dietle_high-signal-prompt-tips-that-go-crazy-1-activity-7394282572895211520-TxGm" target="_blank">View post →</a></div>
+        </div>
+      </div>
+
+      <!-- Discussion Topics Section -->
+      <div class="section">
+        <h2>Discussion Framework</h2>
+        <p>We've identified several areas where your experience could provide unique value to GTM operators:</p>
+
+        <div class="topic-card">
+          <div class="topic-title">Topic 1: Context Management as the Real Unlock (Not Model Performance)</div>
+          <p><strong>Why this is interesting:</strong> Most GTM leaders think AI effectiveness is about picking the right model or writing better prompts. Your insight that context management (how you structure, persist, and retrieve context) is what actually makes AI useful challenges this assumption. This maps directly to building intelligent CRM systems and institutional knowledge capture.</p>
+
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>You've written about how Claude Code's superiority isn't about the model—it's about context management: task decomposition, persistence, and reusability. You also talk about AI that "creates like you do" and systems that compound results over time. What ties these ideas together in your mind? What did you have to learn the hard way to understand this?</li>
+            <li>Walk me through how you think about context management when building for a revenue team. How do you move from messy CRM data and scattered knowledge to a system that actually amplifies someone's expertise?</li>
+            <li>Tell me about a time when you saw a GTM team's AI system go from "this isn't much better than ChatGPT" to "this thing actually remembers how we work." What was the turning point?</li>
+          </ul>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">Topic 2: Building Agentic Search That Actually Finds What You Need</div>
+          <p><strong>Why this is interesting:</strong> GTM teams are drowning in data (CRM records, call transcripts, docs) but struggle to surface insights when needed. Your three-layer framework for agentic search (data/context quality → interface design → agent instructions) is a practical blueprint for making AI search actually useful. This is the "find what I forgot" problem every GTM leader has.</p>
+
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>You shared a three-layer framework for agentic search: underlying context quality, interface design, and agent instructions. Walk me through how you developed this framework. What were you trying to solve that existing search wasn't addressing?</li>
+            <li>Most teams have messy CRM data, unstructured call notes, and scattered docs. When you're working with a GTM team that has this problem, where do you actually start? What's the first layer you focus on and why?</li>
+            <li>You mentioned the difference between "well thought-out structure" versus "throwing a big list of tools into context." Tell me about a time when you saw someone make this mistake. What did the "well thought-out" version look like instead?</li>
+          </ul>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">Topic 3: From "AI Replaces People" to "AI Amplifies Taste"</div>
+          <p><strong>Why this is interesting:</strong> This is a contrarian take that resonates with GTM operators building intelligent systems. Most people fear AI will commoditize expertise; you believe it will create demand for craftsmanship. This philosophical shift ("use AI to amplify your unique taste and expertise" vs. "automate and replace") changes how you design GTM systems entirely.</p>
+
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>Tell me about what craftsmanship means to you in the context of GTM, and why you think we'll need more of it in this age of AI. Most people think AI commoditizes expertise—what makes you see it differently?</li>
+            <li>You talk about "taste is the last moat" and "context is king." Walk me through how these two ideas connect. When you're building systems for a GTM team, how do you think about amplifying their taste versus just automating their process?</li>
+            <li>Give me a concrete example from your work where you helped someone use AI to amplify their unique expertise rather than just automate tasks. What did that look like? What changed for them?</li>
+          </ul>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">Topic 4: Practical Prompt Engineering Patterns That Actually Work</div>
+          <p><strong>Why this is interesting:</strong> Most prompt engineering advice is generic. You share specific, tactical patterns you've learned building systems (borrowing expertise via prompting, using AI to interview you for clarity, task decomposition). These are immediately actionable for GTM operators building workflows.</p>
+
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>You shared three "high signal prompt tips" in one of your posts: borrowing expertise by asking AI who the best person to solve this problem would be, using AI to help you get clarity on the problem itself, and breaking large problems into smaller pieces. What ties these together in your mind? What did you have to learn the hard way to figure these out?</li>
+            <li>Walk me through your process when you're stuck on a GTM problem. How do you move from "I don't know what I'm doing" to "I have a plan"? What role does AI play in that journey?</li>
+            <li>You mentioned that the bottleneck often isn't the AI—it's your own lack of clarity about the problem. Tell me about a time when you realized the problem wasn't the tool, it was how you were thinking about the problem. What helped you get clear?</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Questions Section -->
+      <div class="section">
+        <h2>Conversation Starters</h2>
+        <p>Here are all the questions we're excited to explore with you:</p>
+
+        <h3>Opening Questions (we'll use 1-2 as needed to orient the audience)</h3>
+        <ol>
+          <li>You went from web design and e-commerce freelancing to founding Digital Leverage doing Gen AI implementation, and now you're building Taste Systems focused on "Context Operating Systems." Walk me through how you got into thinking about context engineering as the core problem in GTM.</li>
+          <li>What does Taste Systems actually do day-to-day? You call it "the Bell Labs of technical GTM"—what does that mean to you?</li>
+          <li>How is technical GTM different from traditional GTM ops or rev ops? Where did you realize there was a gap?</li>
+          <li>How has your thinking about AI in GTM evolved from when you started Digital Leverage to now building Context Operating Systems?</li>
+        </ol>
+
+        <h3>Topic 1: Context Management</h3>
+        <ol>
+          <li>You've written about how Claude Code's superiority isn't about the model—it's about context management: task decomposition, persistence, and reusability. You also talk about AI that "creates like you do" and systems that compound results over time. What ties these ideas together in your mind? What did you have to learn the hard way to understand this?</li>
+          <li>Walk me through how you think about context management when building for a revenue team. How do you move from messy CRM data and scattered knowledge to a system that actually amplifies someone's expertise?</li>
+          <li>Tell me about a time when you saw a GTM team's AI system go from "this isn't much better than ChatGPT" to "this thing actually remembers how we work." What was the turning point?</li>
+        </ol>
+
+        <h3>Topic 2: Agentic Search</h3>
+        <ol>
+          <li>You shared a three-layer framework for agentic search: underlying context quality, interface design, and agent instructions. Walk me through how you developed this framework. What were you trying to solve that existing search wasn't addressing?</li>
+          <li>Most teams have messy CRM data, unstructured call notes, and scattered docs. When you're working with a GTM team that has this problem, where do you actually start? What's the first layer you focus on and why?</li>
+          <li>You mentioned the difference between "well thought-out structure" versus "throwing a big list of tools into context." Tell me about a time when you saw someone make this mistake. What did the "well thought-out" version look like instead?</li>
+        </ol>
+
+        <h3>Topic 3: AI Amplifies Taste</h3>
+        <ol>
+          <li>Tell me about what craftsmanship means to you in the context of GTM, and why you think we'll need more of it in this age of AI. Most people think AI commoditizes expertise—what makes you see it differently?</li>
+          <li>You talk about "taste is the last moat" and "context is king." Walk me through how these two ideas connect. When you're building systems for a GTM team, how do you think about amplifying their taste versus just automating their process?</li>
+          <li>Give me a concrete example from your work where you helped someone use AI to amplify their unique expertise rather than just automate tasks. What did that look like? What changed for them?</li>
+        </ol>
+
+        <h3>Topic 4: Prompt Engineering Patterns</h3>
+        <ol>
+          <li>You shared three "high signal prompt tips" in one of your posts: borrowing expertise by asking AI who the best person to solve this problem would be, using AI to help you get clarity on the problem itself, and breaking large problems into smaller pieces. What ties these together in your mind? What did you have to learn the hard way to figure these out?</li>
+          <li>Walk me through your process when you're stuck on a GTM problem. How do you move from "I don't know what I'm doing" to "I have a plan"? What role does AI play in that journey?</li>
+          <li>You mentioned that the bottleneck often isn't the AI—it's your own lack of clarity about the problem. Tell me about a time when you realized the problem wasn't the tool, it was how you were thinking about the problem. What helped you get clear?</li>
+        </ol>
+
+        <h3>Closing Question</h3>
+        <div class="question">
+          <p>What is one thing that most people in GTM believe to be true, but your experience tells you otherwise?</p>
+        </div>
+      </div>
+
+      <!-- Next Steps -->
+      <div class="section">
+        <h2>Next Steps</h2>
+        <div class="topic-card">
+          <h3>Recording Details</h3>
+          <ul style="margin-left: 0; list-style: none;">
+            <li style="margin-bottom: 12px;"><strong>Scheduled Time:</strong> 2:00PM EST, November 18 2025 (Tuesday)</li>
+            <li style="margin-bottom: 12px;"><strong>Squadcast Link:</strong> <a href="https://sqdc.st/s/sbZq6Aq" target="_blank" style="color: #DDA517; text-decoration: none; font-weight: 600;">https://sqdc.st/s/sbZq6Aq</a></li>
+            <li style="margin-bottom: 12px;"><strong>Platform:</strong> Squadcast (browser-based, no download or account needed)</li>
+            <li style="margin-bottom: 12px;"><strong>Duration:</strong> 50-60 minutes</li>
+            <li><strong>Format:</strong> Video podcast, conversational</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">GTM Operator Show · The Workflow Company</div>
+      <div>Conversations with elite operators transforming go-to-market</div>
+    </div>
+  </div>
+</body>
+</html>
