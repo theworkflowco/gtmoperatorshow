@@ -157,6 +157,33 @@
       color: #333;
     }
 
+    .topic-card {
+      background: white;
+      border: 5px solid #9CA886;
+      padding: 24px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .topic-card::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 8px;
+      width: 32px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Crect x='8' y='4' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='0' width='4' height='4' fill='%239CA886'/%3E%3Crect x='16' y='0' width='4' height='4' fill='%239CA886'/%3E%3Crect x='20' y='4' width='4' height='4' fill='%239CA886'/%3E%3Crect x='4' y='8' width='4' height='4' fill='%239CA886'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%239CA886'/%3E%3Crect x='4' y='12' width='4' height='4' fill='%239CA886'/%3E%3Crect x='24' y='12' width='4' height='4' fill='%239CA886'/%3E%3Crect x='8' y='16' width='4' height='4' fill='%239CA886'/%3E%3Crect x='20' y='16' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%239CA886'/%3E%3Crect x='16' y='20' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='4' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='4' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='8' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='20' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='8' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='20' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='16' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='16' width='4' height='4' fill='%23F8EDD1'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .topic-card .topic-title {
+      font-weight: 700;
+      color: #1E1515;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
     .post-reference {
       margin-top: 16px;
       text-align: right;
@@ -333,49 +360,53 @@
         <h2>Discussion Framework</h2>
         <p>We've identified several areas where your experience could provide unique value to GTM operators:</p>
 
-        <h3>Topic 1: From Military Operations to GTM Integration Architecture</h3>
+        <div class="topic-card">
+          <div class="topic-title">Topic 1: From Military Operations to GTM Integration Architecture</div>
+          <p><strong>Why this is interesting:</strong> You bring 13 years of Air Force operational discipline to GTM automation. Most operators don't have military systems thinking—understanding how you translate mission-critical frameworks into integration ecosystems could reveal patterns GTM teams are missing when they treat their GTM stack as a collection of tools rather than a systematic operation.</p>
 
-        <p><strong>Why this is interesting:</strong> You bring 13 years of Air Force operational discipline to GTM automation. Most operators don't have military systems thinking—understanding how you translate mission-critical frameworks into integration ecosystems could reveal patterns GTM teams are missing when they treat their GTM stack as a collection of tools rather than a systematic operation.</p>
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>You've written about how military values—"service first, show up, stay ready, the mission MUST get done"—aren't just military values, they're life values. What ties these operational frameworks together in your mind when you're designing integration layers for a GTM system? What did you have to learn the hard way about applying military discipline to revenue operations?</li>
+            <li>Walk me through how you think about GTM infrastructure differently because of your Air Force background. When you look at how most companies build their GTM stack, what patterns would never survive in military operations?</li>
+            <li>Tell me about a time when you saw a GTM team's system fail in a way that reminded you of operational failures in the military. What was the root cause, and how did you rebuild it with mission-critical thinking?</li>
+          </ul>
+        </div>
 
-        <p><strong>Questions we're excited to explore:</strong></p>
-        <ul>
-          <li>You've written about how military values—"service first, show up, stay ready, the mission MUST get done"—aren't just military values, they're life values. What ties these operational frameworks together in your mind when you're designing integration layers for a GTM system? What did you have to learn the hard way about applying military discipline to revenue operations?</li>
-          <li>Walk me through how you think about GTM infrastructure differently because of your Air Force background. When you look at how most companies build their GTM stack, what patterns would never survive in military operations?</li>
-          <li>Tell me about a time when you saw a GTM team's system fail in a way that reminded you of operational failures in the military. What was the root cause, and how did you rebuild it with mission-critical thinking?</li>
-        </ul>
+        <div class="topic-card">
+          <div class="topic-title">Topic 2: Integration Ecosystems vs Point Solutions</div>
+          <p><strong>Why this is interesting:</strong> You've predicted 2026 will be about "the rise of the integration ecosystem"—systematic connection layers that make point solutions actually scale. Most teams are still connecting tools without thinking architecturally. This shift from tactical tool adoption to strategic infrastructure is something GTM operators need to understand before they're forced to rebuild everything.</p>
 
-        <h3>Topic 2: Integration Ecosystems vs Point Solutions</h3>
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>You wrote that "integrations and partnerships are never more important than now to stay relevant" and that every SaaS will need to integrate via MCP or Connectors. Walk me through what changed in your thinking—when did you realize this wasn't about picking better tools, but about building the connection layer between them?</li>
+            <li>How do you approach designing integration architecture for a GTM motion? When you're starting with a company that has Clay, Instantly, n8n, and their CRM, what's your process for thinking about the integration layer versus just connecting endpoints?</li>
+            <li>Tell me about a company where you've seen the shift from "we connect our tools" to "we have an integration ecosystem." What was the inflection point? What had to break first before they understood the difference?</li>
+          </ul>
+        </div>
 
-        <p><strong>Why this is interesting:</strong> You've predicted 2026 will be about "the rise of the integration ecosystem"—systematic connection layers that make point solutions actually scale. Most teams are still connecting tools without thinking architecturally. This shift from tactical tool adoption to strategic infrastructure is something GTM operators need to understand before they're forced to rebuild everything.</p>
+        <div class="topic-card">
+          <div class="topic-title">Topic 3: Token Efficiency and Constraint-Driven AI Design</div>
+          <p><strong>Why this is interesting:</strong> Your TOON format experiments show that constraining tokens actually improves output quality. You've implemented this in Instantly.ai's MCP Server and measured real savings. This counter-intuitive finding—that less structure can produce better outputs when designed intentionally—challenges how most GTM operators think about AI system design.</p>
 
-        <p><strong>Questions we're excited to explore:</strong></p>
-        <ul>
-          <li>You wrote that "integrations and partnerships are never more important than now to stay relevant" and that every SaaS will need to integrate via MCP or Connectors. Walk me through what changed in your thinking—when did you realize this wasn't about picking better tools, but about building the connection layer between them?</li>
-          <li>How do you approach designing integration architecture for a GTM motion? When you're starting with a company that has Clay, Instantly, n8n, and their CRM, what's your process for thinking about the integration layer versus just connecting endpoints?</li>
-          <li>Tell me about a company where you've seen the shift from "we connect our tools" to "we have an integration ecosystem." What was the inflection point? What had to break first before they understood the difference?</li>
-        </ul>
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>You're testing TOON format (Token-Oriented Object Notion) because context windows are a challenge and you've already seen "improvements in how responses are handled, thus saving tokens." Walk me through what you learned when you first constrained the structure—what surprised you about how the AI responded when you gave it less?</li>
+            <li>Most teams approach AI prompts by adding more context, more examples, more instructions. Your work suggests the opposite—that constraint forces clarity. What does this tell you about how GTM operators should be designing AI-native workflows? Where do most teams over-engineer?</li>
+            <li>Tell me about a specific implementation where you saw token efficiency translate into better results. Not just cheaper—actually better outputs. What was the use case, and what did the constraint reveal about the system's understanding?</li>
+          </ul>
+        </div>
 
-        <h3>Topic 3: Token Efficiency and Constraint-Driven AI Design</h3>
+        <div class="topic-card">
+          <div class="topic-title">Topic 4: Builder Mindset—Creating What Doesn't Exist</div>
+          <p><strong>Why this is interesting:</strong> You've built multiple n8n community nodes "in your sleep" because integration gaps are where GTM operations break down. When the connectors don't exist, you build them rather than accepting limitations. This "build vs buy vs accept" decision framework is critical for GTM operators who need to know when to extend their tools versus work within constraints.</p>
 
-        <p><strong>Why this is interesting:</strong> Your TOON format experiments show that constraining tokens actually improves output quality. You've implemented this in Instantly.ai's MCP Server and measured real savings. This counter-intuitive finding—that less structure can produce better outputs when designed intentionally—challenges how most GTM operators think about AI system design.</p>
-
-        <p><strong>Questions we're excited to explore:</strong></p>
-        <ul>
-          <li>You're testing TOON format (Token-Oriented Object Notion) because context windows are a challenge and you've already seen "improvements in how responses are handled, thus saving tokens." Walk me through what you learned when you first constrained the structure—what surprised you about how the AI responded when you gave it less?</li>
-          <li>Most teams approach AI prompts by adding more context, more examples, more instructions. Your work suggests the opposite—that constraint forces clarity. What does this tell you about how GTM operators should be designing AI-native workflows? Where do most teams over-engineer?</li>
-          <li>Tell me about a specific implementation where you saw token efficiency translate into better results. Not just cheaper—actually better outputs. What was the use case, and what did the constraint reveal about the system's understanding?</li>
-        </ul>
-
-        <h3>Topic 4: Builder Mindset—Creating What Doesn't Exist</h3>
-
-        <p><strong>Why this is interesting:</strong> You've built multiple n8n community nodes "in your sleep" because integration gaps are where GTM operations break down. When the connectors don't exist, you build them rather than accepting limitations. This "build vs buy vs accept" decision framework is critical for GTM operators who need to know when to extend their tools versus work within constraints.</p>
-
-        <p><strong>Questions we're excited to explore:</strong></p>
-        <ul>
-          <li>You wrote that you've "built several n8n community nodes that I can basically do them in my sleep" because you needed integrations that didn't exist. Walk me through your decision framework—how do you know when to build versus when to work around the limitation? What signals tell you "this gap is worth solving"?</li>
-          <li>How has your thinking about "builder mindset" evolved as you've scaled Top of Funnel? When you started, what kinds of integrations did you build that you'd now tell someone to just work around? What changed?</li>
-          <li>Tell me about a time when you built a connector that ended up being critical to a client's GTM motion. What would have broken if you'd accepted the limitation? How did building it change what was possible for their revenue operations?</li>
-        </ul>
+          <h3>Questions we're excited to explore:</h3>
+          <ul>
+            <li>You wrote that you've "built several n8n community nodes that I can basically do them in my sleep" because you needed integrations that didn't exist. Walk me through your decision framework—how do you know when to build versus when to work around the limitation? What signals tell you "this gap is worth solving"?</li>
+            <li>How has your thinking about "builder mindset" evolved as you've scaled Top of Funnel? When you started, what kinds of integrations did you build that you'd now tell someone to just work around? What changed?</li>
+            <li>Tell me about a time when you built a connector that ended up being critical to a client's GTM motion. What would have broken if you'd accepted the limitation? How did building it change what was possible for their revenue operations?</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Next Steps -->
