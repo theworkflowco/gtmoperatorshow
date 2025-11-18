@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Charleson - GTM Operator Show Prep</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #F8EDD1;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          #F9F7F2 0px,
+          #F9F7F2 12px,
+          transparent 12px,
+          transparent 16px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          #F9F7F2 0px,
+          #F9F7F2 12px,
+          transparent 12px,
+          transparent 16px
+        );
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      padding: 60px 20px;
+      color: #1E1515;
+      line-height: 1.7;
+      position: relative;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #F9F7F2;
+      border: 6px solid #BA7350;
+      border-radius: 7px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      padding: 50px 60px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1E1515;
+    }
+
+    .logo-w {
+      color: #DDA517;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #666;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 600px;
+    }
+
+    .guest-name {
+      font-family: 'Fira Code', monospace;
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 30px;
+      color: #1E1515;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-top: 6px;
+    }
+
+    .content {
+      padding: 50px 60px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1E1515;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #DDA517;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: #DDA517;
+      opacity: 0.4;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1E1515;
+      margin: 30px 0 12px 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .highlight-box {
+      background: #F9F9F9;
+      border-left: 3px solid #DDA517;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      color: #333;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .topic-card {
+      background: white;
+      border: 5px solid #9CA886;
+      padding: 24px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .topic-card::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 8px;
+      width: 32px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Crect x='8' y='4' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='0' width='4' height='4' fill='%239CA886'/%3E%3Crect x='16' y='0' width='4' height='4' fill='%239CA886'/%3E%3Crect x='20' y='4' width='4' height='4' fill='%239CA886'/%3E%3Crect x='4' y='8' width='4' height='4' fill='%239CA886'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%239CA886'/%3E%3Crect x='4' y='12' width='4' height='4' fill='%239CA886'/%3E%3Crect x='24' y='12' width='4' height='4' fill='%239CA886'/%3E%3Crect x='8' y='16' width='4' height='4' fill='%239CA886'/%3E%3Crect x='20' y='16' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%239CA886'/%3E%3Crect x='16' y='20' width='4' height='4' fill='%239CA886'/%3E%3Crect x='12' y='4' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='4' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='8' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='20' y='8' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='8' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='20' y='12' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='12' y='16' width='4' height='4' fill='%23F8EDD1'/%3E%3Crect x='16' y='16' width='4' height='4' fill='%23F8EDD1'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .topic-title {
+      font-weight: 700;
+      color: #1E1515;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .question {
+      background: #F9F9F9;
+      border-left: 3px solid #DDA517;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .question-number {
+      color: #DDA517;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    blockquote {
+      background: #F9F9F9;
+      border-left: 3px solid #DDA517;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    .post-reference {
+      margin-top: 16px;
+      text-align: right;
+    }
+
+    .post-reference a {
+      display: inline-block;
+      background: #F8EDD1;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          #F9F7F2 0px,
+          #F9F7F2 2px,
+          transparent 2px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          #F9F7F2 0px,
+          #F9F7F2 2px,
+          transparent 2px,
+          transparent 4px
+        );
+      color: #7A5C3E;
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      margin-right: 42px;
+      text-decoration: none;
+      position: relative;
+      box-shadow:
+        0 -3px 0 0 #B8860B,
+        0 3px 0 0 #B8860B,
+        -3px 0 0 0 #B8860B,
+        3px 0 0 0 #B8860B,
+        -2px -3px 0 0 #B8860B,
+        2px -3px 0 0 #B8860B,
+        -2px 3px 0 0 #B8860B,
+        2px 3px 0 0 #B8860B,
+        -3px -2px 0 0 #B8860B,
+        3px -2px 0 0 #B8860B,
+        -3px 2px 0 0 #B8860B,
+        3px 2px 0 0 #B8860B;
+    }
+
+    .post-reference a:hover {
+      background: #F9F7F2;
+      color: #5C4530;
+    }
+
+    .footer {
+      background: #1E1515;
+      color: #EDE9E5;
+      padding: 30px 60px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    @media print {
+      body {
+        background: #F8EDD1;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        background: #F9F7F2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">The <span class="logo-w">W</span>orkflow Company</div>
+      <div class="tagline">Podcast Research Brief for the GTM Operator Show</div>
+      <div class="guest-name">Brandon Charleson</div>
+      <div class="subtitle">Founder · Top of Funnel | Clay Certified Expert | Instantly.ai Consultant</div>
+    </div>
+
+    <div class="content">
+      <!-- About the Show Section -->
+      <div class="section">
+        <h2>About the GTM Operator Show</h2>
+        <p><strong>GTM Operator Show</strong> features conversations with operators who are pushing the boundaries of how GTM teams work—exploring the thinking patterns and decision frameworks behind meaningful innovation.</p>
+
+        <h3>The Audience</h3>
+        <p>The show reaches ~10,000 highly curated GTM leaders on LinkedIn—practitioners and leaders at tech startups who are actively seeking better approaches to revenue operations, process design, and systematic execution. These are operators who care about how things work, not just what to do.</p>
+
+        <h3>Format</h3>
+        <ul>
+          <li><strong>Platform:</strong> Squadcast (browser-based, no download or account needed)</li>
+          <li><strong>Duration:</strong> 50-60 minutes of conversation (edited down for the final episode)</li>
+          <li><strong>Style:</strong> Video podcast, conversational—just you and the host talking through the topics</li>
+          <li><strong>Timing flexibility:</strong> If you have a product launch or time-sensitive announcement, we can coordinate your episode timing to align with your promotional window</li>
+        </ul>
+      </div>
+
+      <!-- About Section -->
+      <div class="section">
+        <h2>What We Know About Brandon</h2>
+        <p>Brandon Charleson is a builder at the intersection of military precision and modern GTM automation. As Founder of Top of Funnel, Clay Certified Expert, and Instantly.ai consultant, he brings systematic thinking from 13 years of Air Force service to solving GTM challenges through integration ecosystems.</p>
+
+        <p>His background spans from digital filmmaking at LA Film School to exercise science at American Military University, but it's his operational excellence mindset that defines his approach to GTM systems. He's not just implementing tools—he's architecting integration layers that make GTM operations systematic and scalable.</p>
+      </div>
+
+      <!-- Why This Conversation Section -->
+      <div class="section">
+        <h2>Why This Conversation Matters</h2>
+        <p>Brandon represents a rare intersection: military operational discipline meets modern GTM tooling expertise. His work on token efficiency, integration ecosystems, and systematic automation reveals someone thinking deeply about how GTM systems should actually work—not just what features exist.</p>
+
+        <div class="highlight-box">
+          <p>The GTM Operator Show audience needs to hear from operators who are building with first-principles thinking. Brandon's approach to Clay implementations, n8n community contributions, and TOON format experimentation demonstrates someone solving real problems through systematic engineering—not just following best practices.</p>
+        </div>
+      </div>
+
+      <!-- From Their Content Section -->
+      <div class="section">
+        <h2>From Your Content</h2>
+        <p>We've been following your work closely. Here are some insights that particularly resonated:</p>
+
+        <blockquote>
+          "My 2026 prediction: the rise of the integration ecosystem. Builder mindset becomes essential as companies realize point solutions don't scale without systematic connection layers."
+        </blockquote>
+
+        <blockquote>
+          "Testing TOON format for token efficiency—lower token prompts producing higher quality outputs. The constraint forces clarity in what we're actually asking systems to do."
+        </blockquote>
+
+        <blockquote>
+          "Building n8n community nodes because the integration gaps are where GTM operations break down. If the connectors don't exist, you build them."
+        </blockquote>
+
+        <p>Your posts on open-source vs closed-source LLMs, operational excellence from military background, and advanced Clay implementations show someone thinking architecturally about GTM systems—not tactically about features.</p>
+      </div>
+
+      <!-- Discussion Topics Section -->
+      <div class="section">
+        <h2>Discussion Framework</h2>
+        <p>We've identified several areas where your experience could provide unique value to GTM operators:</p>
+
+        <div class="topic-card">
+          <div class="topic-title">1. From Military Operations to GTM Operations</div>
+          <p>You spent 13 years in the Air Force before moving into GTM automation. How does operational discipline from military systems thinking translate to designing GTM workflows? What patterns from military operations actually apply when building systematic GTM processes?</p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">2. Integration Ecosystems as GTM Architecture</div>
+          <p>You're predicting 2026 will be about "the rise of the integration ecosystem." Walk us through what you mean by integration layers versus point solutions. When does a company need to think architecturally about their GTM integrations instead of just connecting tools?</p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">3. Token Efficiency and AI Prompt Engineering</div>
+          <p>Your TOON format experimentation focuses on lower-token prompts producing higher quality. Tell us about what you're seeing with token efficiency constraints forcing clarity in system design. How does this thinking apply to GTM operators building AI-native workflows?</p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-title">4. Building What Doesn't Exist (n8n Community Nodes)</div>
+          <p>You've contributed n8n community nodes when integration gaps blocked workflows. What's your decision framework for "build vs buy" when the connector doesn't exist? How do GTM operators know when to extend their tools versus accept limitations?</p>
+        </div>
+      </div>
+
+      <!-- Questions Section -->
+      <div class="section">
+        <h2>Conversation Starters</h2>
+        <p>Here are some questions we're excited to explore with you:</p>
+
+        <div class="question">
+          <span class="question-number">Q:</span> You talk about "builder mindset" becoming essential. What does that actually mean for a GTM leader who isn't technical? Where's the line between configuring tools and engineering systems?
+        </div>
+
+        <div class="question">
+          <span class="question-number">Q:</span> Your military background emphasizes operational excellence and systematic execution. When you look at how most GTM teams operate, what patterns do you see that would never survive in military operations? What's the equivalent of "mission-critical" thinking for GTM?
+        </div>
+
+        <div class="question">
+          <span class="question-number">Q:</span> You're working across Clay, Instantly.ai, and n8n. Tell me about the integration layer between these tools—not the technical implementation, but the architectural thinking that determines what connects where and why.
+        </div>
+
+        <div class="question">
+          <span class="question-number">Q:</span> TOON format testing is about token efficiency forcing clarity. Walk me through an example where constraining the prompt actually improved the output. What does that reveal about how we should be thinking about AI in GTM operations?
+        </div>
+
+        <div class="question">
+          <span class="question-number">Q:</span> When you're consulting with companies implementing Clay or Instantly.ai, what's the most common mistake you see? Not configuration errors—strategic mistakes in how they're thinking about the system's role in their GTM motion.
+        </div>
+      </div>
+
+      <!-- Next Steps -->
+      <div class="section">
+        <h2>Next Steps</h2>
+        <div class="topic-card">
+          <p><strong>We'd love to have you on the GTM Operator Show.</strong></p>
+          <p>This research brief reflects the depth of preparation we bring to every conversation. Our goal is to create a dialogue that serves GTM operators who are building systematic, scalable processes.</p>
+          <p>If this resonates, let's schedule a time to talk.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">GTM Operator Show · The Workflow Company</div>
+      <div>AI-powered intelligence orchestration for B2B GTM</div>
+    </div>
+  </div>
+</body>
+</html>
